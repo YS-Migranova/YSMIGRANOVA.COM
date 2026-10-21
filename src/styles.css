@@ -1,0 +1,90 @@
+@import "tailwindcss" source("../");
+
+@theme {
+  --color-navy-950: #050f1f;
+  --color-navy-900: #0a1a33;
+  --color-navy-800: #102545;
+  --color-navy-700: #1a335a;
+  --color-navy-600: #2a4774;
+  --color-gold-300: #ead7a4;
+  --color-gold-400: #dcbf74;
+  --color-gold-500: #c9a24b;
+  --color-gold-600: #a9852f;
+  --color-ivory: #faf7f0;
+  --color-ink: #1d2433;
+  --font-display: "Cormorant Garamond", Georgia, serif;
+  --font-sans: "Manrope", system-ui, -apple-system, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-sans);
+  color: var(--color-ink);
+  background: var(--color-ivory);
+  -webkit-font-smoothing: antialiased;
+}
+
+::selection {
+  background: var(--color-gold-300);
+  color: var(--color-navy-900);
+}
+
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--color-gold-600);
+}
+.eyebrow::before {
+  content: "";
+  width: 2rem;
+  height: 1px;
+  background: currentColor;
+}
+.on-dark .eyebrow,
+.eyebrow.on-dark {
+  color: var(--color-gold-400);
+}
+
+.field {
+  width: 100%;
+  border: 1px solid #d9d3c4;
+  background: #fff;
+  border-radius: 0.5rem;
+  padding: 0.75rem 0.9rem;
+  font: inherit;
+  color: var(--color-ink);
+  transition: border-color 0.15s, box-shadow 0.15s;
+}
+.field:focus {
+  outline: none;
+  border-color: var(--color-gold-500);
+  box-shadow: 0 0 0 3px rgb(201 162 75 / 0.2);
+}
+
+.gold-rule {
+  background: linear-gradient(90deg, transparent, var(--color-gold-500), transparent);
+  height: 1px;
+}
+
+@keyframes rise {
+  from { opacity: 0; transform: translateY(14px); }
+  to { opacity: 1; transform: none; }
+}
+.rise { animation: rise 0.8s cubic-bezier(0.2, 0.7, 0.2, 1) both; }
+.rise-1 { animation-delay: 0.1s; }
+.rise-2 { animation-delay: 0.25s; }
+.rise-3 { animation-delay: 0.4s; }
+
+@media (prefers-reduced-motion: reduce) {
+  .rise { animation: none; }
+  html { scroll-behavior: auto; }
+}

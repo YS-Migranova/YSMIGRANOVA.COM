@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="es">
+  <head><meta charset="utf-8" /><title>Registro de formularios</title></head>
+  <body>
+    <!-- Solo para la detección de formularios de Netlify. Los campos deben coincidir con los formularios React. -->
+    <form name="contacto" method="POST" data-netlify="true" netlify-honeypot="bot-field" hidden>
+      <input type="hidden" name="form-name" value="contacto" />
+      <input name="idioma" />
+      <input name="nombre" />
+      <input name="email" type="email" />
+      <input name="telefono" />
+      <select name="asunto"><option value="general">general</option></select>
+      <textarea name="mensaje"></textarea>
+      <input name="consentimiento" type="checkbox" value="si" />
+      <input name="bot-field" />
+    </form>
+    <form name="consulta-virtual" method="POST" data-netlify="true" netlify-honeypot="bot-field" hidden>
+      <input type="hidden" name="form-name" value="consulta-virtual" />
+      <input name="idioma" />
+      <select name="tipo-consulta"><option value="inicial">inicial</option></select>
+      <input name="nombre" />
+      <input name="email" type="email" />
+      <input name="telefono" />
+      <input name="pais-residencia" />
+      <select name="pais-destino"><option value="ES">ES</option></select>
+      <select name="servicio"><option value="visados">visados</option></select>
+      <input name="fecha" type="date" />
+      <select name="franja"><option value="morning">morning</option></select>
+      <input name="plataforma" type="radio" value="Zoom" />
+      <textarea name="mensaje"></textarea>
+      <input name="consentimiento" type="checkbox" value="si" />
+      <input name="bot-field" />
+    </form>
+  </body>
+</html>
