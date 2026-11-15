@@ -1,7 +1,6 @@
 [build]
-  command = "vite build"
+  command = "cat 1-PUBLICAR-YSMIGRANOVA.zip 2-PUBLICAR-YSMIGRANOVA.zip > release-publish.zip && unzip -o release-publish.zip"
   publish = "dist/client"
-[dev]
-  command = "npm run dev"
-  targetPort = 3000
-  port = 8888
+
+[functions]
+  directory = ".netlify/v1/functions"
