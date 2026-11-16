@@ -1,5 +1,5 @@
 [build]
-  command = "cat editor-runtime-01.part editor-runtime-02.part editor-runtime-03.part editor-runtime-04.part > release-publish.zip && unzip -o release-publish.zip"
+  command = "cat editor-runtime-01.part editor-runtime-02.part editor-runtime-03.part editor-runtime-04.part > release-publish.zip && unzip -o release-publish.zip && unzip -o cookie-runtime-patch-v2.zip"
   publish = "dist/client"
 
 [functions]
