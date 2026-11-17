@@ -1,5 +1,5 @@
 [build]
-  command = "cat editor-runtime-01.part editor-runtime-02.part editor-runtime-03.part editor-runtime-04.part > release-publish.zip && unzip -o release-publish.zip && unzip -o cookie-runtime-patch-v4.zip && unzip -o router-runtime-patch-v6.zip && unzip -o tanstack-store-patch-v7.zip && unzip -o portal-fix-v10.zip && unzip -o logo-champan-web-v2.zip && unzip -o letter-logo-refined-v1.zip"
+  command = "cat editor-runtime-01.part editor-runtime-02.part editor-runtime-03.part editor-runtime-04.part > release-publish.zip && unzip -o release-publish.zip && unzip -o cookie-runtime-patch-v4.zip && unzip -o router-runtime-patch-v6.zip && unzip -o tanstack-store-patch-v7.zip && unzip -o portal-fix-v10.zip && unzip -o logo-champan-web-v2.zip && unzip -o letter-logo-refined-v1.zip && unzip -o letter-logo-transparent-v1.zip"
   publish = "dist/client"
 
 [functions]
